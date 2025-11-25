@@ -2,9 +2,8 @@
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 20px;
-  display: flex;
-  justify-content: space-around;
   background-color: rgb(137, 109, 114);
+  display: flex;
 }
 
 .navbar .nav-link {
@@ -23,13 +22,11 @@
 .container-fluid {
   background-color: rgb(143, 86, 143);
 }
-/* .navbar-container {
-  max-width: 800px;
-  margin-left: 0 auto;
-  padding-right: 80px;
+.navbar-container {
+  background-color: rgb(137, 109, 114);
   display: flex;
 }
-.navbar-container img {
+/* .navbar-container img {
   margin-right: auto;
   padding-left: 0;
   justify-items: flex-start;
@@ -62,8 +59,10 @@ h2 {
   gap: 1.5rem;
   max-width: 900px;
   margin: 2rem auto;
+
   font-size: 30px;
 }
+
 .about h2 {
   font-weight: bold;
 }
@@ -72,8 +71,10 @@ h2 {
   height: auto;
   border-radius: 8px;
   opacity: 0;
+  margin-right: 50px;
   transform: rotate(-15deg) scale(0.8);
   animation: rotateIn 1.5s ease forwards;
+  padding: auto;
 }
 
 @keyframes rotateIn {
@@ -105,7 +106,7 @@ h2 {
 .description {
   width: 300px;
   height: auto;
- }
+}
 
 .description h3 {
   font-weight: bold;
@@ -161,8 +162,8 @@ h2 {
   /* align-items: center; center vertically */
   min-height: 70vh;
   /* position:relative;   */
-   margin-left: 100px; 
-   margin-right: 100px; 
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 #carouselImage {
