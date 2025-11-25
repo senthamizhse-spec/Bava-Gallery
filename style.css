@@ -254,6 +254,7 @@ h2 {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px auto;
+  padding: auto;
   background-color: rgba(0, 0, 0, 0.229);
   min-height: 70vh;
 }
