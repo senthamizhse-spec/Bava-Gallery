@@ -23,7 +23,7 @@
 .container-fluid {
   background-color: rgb(143, 86, 143);
 }
-.navbar-container {
+/* .navbar-container {
   max-width: 800px;
   margin-left: 0 auto;
   padding-right: 80px;
@@ -33,7 +33,7 @@
   margin-right: auto;
   padding-left: 0;
   justify-items: flex-start;
-}
+} */
 
 html,
 body {
