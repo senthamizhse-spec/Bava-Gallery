@@ -15,7 +15,6 @@
 }
 .nav-item {
   margin-left: 20px;
-  justify-content: space-between;
 }
 .navbar .nav-link:visited {
   color: black;
