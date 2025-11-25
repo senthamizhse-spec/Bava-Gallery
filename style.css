@@ -14,8 +14,8 @@
   font-size: 30px;
 }
 .nav-item {
-  margin-left: 60px;
-  justify-content: space-around;
+  margin-left: 50px;
+  justify-content: space-between;
 }
 .navbar .nav-link:visited {
   color: black;
