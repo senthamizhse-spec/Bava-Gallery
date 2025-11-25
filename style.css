@@ -1,0 +1,330 @@
+.navbar {
+  font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+  font-size: 20px;
+  /* margin-top: 20px; */
+  display:flex;
+  justify-content: space-around;
+  justify-items: flex-end;
+  background-color: rgb(137, 109, 114);
+}
+ 
+.navbar .nav-link {
+  color: black;
+    /* margin-left: 30px;  */
+    justify-content: space-between;
+   margin-top:0; 
+  transition: color 0.3s;
+  font-size: 30px;  
+ }
+ .nav-item {
+  margin-left: 180px;
+  justify-content: space-between;
+  }
+.navbar .nav-link:visited {
+  color: black;
+}
+.container-fluid {
+  background-color: rgb(143, 86, 143);
+}
+.navbar-container
+  {
+    max-width: 800px;
+    margin-left: 0 auto;
+    padding-right: 80px ;
+    display: flex;
+    }
+  .navbar-container img {
+    
+    margin-right: auto;
+    padding-left: 0;
+    justify-items: flex-start;
+  }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+} 
+h2 {
+  color: black;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  font-size: 40px;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+}
+
+.divider {
+  display: flex;
+  align-items: flex-start; /* top alignment */
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  font-size: 30px;
+}
+.about h2 {
+  font-weight: bold;
+}
+.about img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  opacity: 0;
+  transform: rotate(-15deg) scale(0.8);
+  animation: rotateIn 1.5s ease forwards;
+
+
+}
+
+@keyframes rotateIn {
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: auto;
+  }
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .divider {
+    flex-direction: column;
+     margin-left: 20px;
+    margin-right: 20px;
+    min-height: auto;
+  }
+}
+
+.description {
+  width: 500px;
+  height: auto;
+}
+
+.description h3 {
+  font-weight:bold;
+  font-style: italic;
+  font-size: 30px;
+ }
+ .description p {
+ font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+
+.carousel-container {
+  display: flex;            /* flexbox for alignment */
+  align-items: center;      /* vertical centering */
+  min-height: auto;
+  justify-content: center;  /* horizontal centering */
+  margin-bottom: 20px;
+  max-width: 100%;
+  padding: 0 1rem;
+
+  }
+
+    .carousel-container img {
+       max-width: 350px;
+       margin-bottom: 30px;
+       width: 100%;
+       height:auto;
+      object-fit: contain;
+      display: block;
+       margin-top: 60px; */
+      /* margin:0 auto; */
+      border-radius: 15px;
+      
+    }
+ .carousel-item {
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+  min-height: 70vh;         /* full viewport height */
+}
+
+.carousel-item img {
+  max-width: 700px;          /* limit image size */
+  width:600px;               /* responsive scaling */
+  height: 550px;              /* keep aspect ratio */
+  object-fit: contain;
+  display: block;
+  margin: 0 0;            /* ensures horizontal centering */
+  border-radius: 15px;
+}
+
+/* Parent wrapper for the carousel */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  min-height: 70vh;     
+   /* position:relative;   */
+   margin-left:100px;
+   margin-right:100px; 
+  }
+
+
+  #carouselImage {
+     width: 100%;
+  height: auto;
+  max-height: 70vh;   /* prevent image from being too tall */
+  object-fit: cover; /* keep proportions */
+  border-radius: 8px;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+  #contact h2
+  {
+    font-weight: bold;
+  }
+/* Carousel itself */
+.carousel-container {
+  max-width: 100%;          /* limit width */
+  width: 700px;    
+  margin-left: auto;  
+  margin-right: auto;        
+  /* background-color:beige; */
+ }
+
+ .carousel-controls {
+    /* position:relative; */
+    display: flex;
+    justify-content: center; 
+    gap:1rem;
+     width:500px;
+    height: auto;
+       }
+
+.carousel-controls img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+#prevBtn {
+ margin-top: 300px;
+ margin-right: 40px;
+  height:100px  /* more spacing */
+}
+
+#nextBtn {
+  margin-top:300px;
+  margin-left:40px;
+  height: 100px;
+}
+
+
+  /* Buttons styling */
+.carousel-controls button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width:300px) {
+  .carousel-controls {
+    flex-direction: column; /* stack buttons above/below image */
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: auto;
+
+  }
+
+  .carousel-controls button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+
+    .carousel-controls button:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+
+.carousel-caption {
+  background: rgba(0,0,0,0.5); /* semi-transparent overlay */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#heroCarousel {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+   overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  margin: 10px auto;
+  background-color: rgba(0, 0, 0, 0.229);
+  min-height: 70vh;
+  
+}
+#heroCarousel img {
+  
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:10px;
+   opacity: 0;
+  transform: rotate(-15deg) scale(0.8);
+  animation: rotateIn 1.5s ease forwards;
+
+   
+}
+
+
+
+.Homecontent {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.Homecontent h2{
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.inputform {
+
+  margin-left:50px;
+  font-size: 20px;
+
+}
+
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* pushes footer down */
+}
+
+footer {
+  background: purple;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 0;
+}
