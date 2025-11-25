@@ -1,134 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Gallery</title>
-  <link rel="stylesheet" href="style.css"> 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body style="background-image: url('images/Atmospheric_background.png'); 
-             background-size: cover; 
-             background-repeat: no-repeat; 
-             background-position: center; 
-             background-attachment: fixed;">
+  <body
+    style="
+      background-image: url('images/Atmospheric_background.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    "
+  >
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a href="index.html" class="navbar-brand" style="margin-right: 12rem">
+            <img
+              src="images/Bava_Logo.png"
+              alt="Bava Art Gallery Logo"
+              width="70"
+              height="70"
+            />
+          </a>
 
-  <div class="wrapper">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a href="index.html" class="navbar-brand" style="margin-right: 12rem">
-          <img src="images/Bava_Logo.png" alt="Bava Art Gallery Logo" width="70" height="70"/>
-        </a>
+          <!-- Toggle Button for Mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- Toggle Button for Mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <!-- Carousel -->
-    <main class="carousel-container text-center my-4">
-      <div class="carousel-controls">
-        <button id="prevBtn">&#10094;&#10094; Prev</button>
-        <img id="carouselImage" src="images/Gallery/art1.jpg" alt="Artwork 1" >
-        <button id="nextBtn">&#10095;&#10095; Next</button>
-      </div>
-    </main>
+      <!-- Carousel -->
+      <main class="carousel-container text-center my-4">
+        <div class="carousel-controls">
+          <button id="prevBtn">&#10094;&#10094; Prev</button>
+          <img
+            id="carouselImage"
+            src="images/Gallery/art1.jpg"
+            alt="Artwork 1"
+          />
+          <button id="nextBtn">&#10095;&#10095; Next</button>
+        </div>
+      </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 Bava Art Gallery. All rights reserved.</p>
-    </footer>
-  </div>
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2024 Bava Art Gallery. All rights reserved.</p>
+      </footer>
+    </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Carousel Script -->
- <script>
-  const totalImages = 25; // total artworks
-  let currentIndex = 1;
-  const carouselImage = document.getElementById("carouselImage");
-  let slideshowInterval;
+    <!-- Carousel Script -->
+    <script>
+      const totalImages = 25; // total artworks
+      let currentIndex = 1;
+      const carouselImage = document.getElementById("carouselImage");
+      let slideshowInterval;
 
-    
+      function showImage(index) {
+        carouselImage.style.opacity = 0;
+        setTimeout(() => {
+          carouselImage.src = `images/Gallery/art${index}.jpg`;
+          carouselImage.alt = `Artwork ${index}`;
+          carouselImage.style.opacity = 1;
+        }, 300);
+      }
 
-  function showImage(index) {
-    carouselImage.style.opacity = 0;
-    setTimeout(() => {
-      carouselImage.src = `images/Gallery/art${index}.jpg`;
-      carouselImage.alt = `Artwork ${index}`;
-      carouselImage.style.opacity = 1;
-    }, 300);
-  }
+      function nextImage() {
+        currentIndex = (currentIndex % totalImages) + 1;
+        showImage(currentIndex);
+      }
 
-  function nextImage() {
-    currentIndex = (currentIndex % totalImages) + 1;
-    showImage(currentIndex);
-  }
+      function prevImage() {
+        currentIndex = ((currentIndex - 2 + totalImages) % totalImages) + 1;
+        showImage(currentIndex);
+      }
 
-  function prevImage() {
-    currentIndex = (currentIndex - 2 + totalImages) % totalImages + 1;
-    showImage(currentIndex);
-  }
+      // Buttons
+      document.getElementById("nextBtn").addEventListener("click", nextImage);
+      document.getElementById("prevBtn").addEventListener("click", prevImage);
 
-  // Buttons
-  document.getElementById("nextBtn").addEventListener("click", nextImage);
-  document.getElementById("prevBtn").addEventListener("click", prevImage);
+      // Auto-play
+      function startSlideshow() {
+        slideshowInterval = setInterval(nextImage, 3000); // 3s per slide
+      }
+      function stopSlideshow() {
+        clearInterval(slideshowInterval);
+      }
+      startSlideshow();
 
-  // Auto-play
-  function startSlideshow() {
-    slideshowInterval = setInterval(nextImage, 5000); // 5s per slide
-  }
-  function stopSlideshow() {
-    clearInterval(slideshowInterval);
-  }
-  startSlideshow();
+      // Pause on hover (desktop)
+      carouselImage.addEventListener("mouseenter", stopSlideshow);
+      carouselImage.addEventListener("mouseleave", startSlideshow);
 
-  // Pause on hover (desktop)
-  carouselImage.addEventListener("mouseenter", stopSlideshow);
-  carouselImage.addEventListener("mouseleave", startSlideshow);
+      // Pause on touch (mobile)
+      carouselImage.addEventListener("touchstart", stopSlideshow);
+      carouselImage.addEventListener("touchend", startSlideshow);
 
-  // Pause on touch (mobile)
-  carouselImage.addEventListener("touchstart", stopSlideshow);
-  carouselImage.addEventListener("touchend", startSlideshow);
+      // Swipe support
+      let touchStartX = 0;
+      let touchEndX = 0;
 
-  // Swipe support
-  let touchStartX = 0;
-  let touchEndX = 0;
+      carouselImage.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
 
-  carouselImage.addEventListener("touchstart", (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
+      carouselImage.addEventListener("touchend", (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      });
 
-  carouselImage.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-
-  function handleSwipe() {
-    if (touchEndX < touchStartX - 50) {
-      nextImage(); // swipe left → next
-    }
-    if (touchEndX > touchStartX + 50) {
-      prevImage(); // swipe right → prev
-    }
-  }
-</script>
-</body>
+      function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+          nextImage(); // swipe left → next
+        }
+        if (touchEndX > touchStartX + 50) {
+          prevImage(); // swipe right → prev
+        }
+      }
+    </script>
+  </body>
 </html>
