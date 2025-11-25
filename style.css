@@ -26,12 +26,6 @@
   background-color: rgb(137, 109, 114);
   display: flex;
 }
-/* .navbar-container img {
-  margin-right: auto;
-  padding-left: 0;
-  justify-items: flex-start;
-} */
-
 html,
 body {
   height: 100%;
