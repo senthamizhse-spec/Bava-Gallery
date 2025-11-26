@@ -2,9 +2,14 @@
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 20px;
-  background-color: rgb(137, 109, 114);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+    background-color: rgb(137, 109, 114); 
 }
+
+
+
 
 .navbar .nav-link {
   color: black;
@@ -22,10 +27,7 @@
 .container-fluid {
   background-color: rgb(143, 86, 143);
 }
-.navbar-container {
-  background-color: rgb(137, 109, 114);
-  display: flex;
-}
+
 html,
 body {
   height: 100%;
@@ -215,7 +217,7 @@ h2 {
 }
 
 /* Responsive tweaks */
-@media (max-width: 400px) {
+@media (max-width: 300px) {
   .carousel-controls {
     flex-direction: column; /* stack buttons above/below image */
     margin-left: 20px;
