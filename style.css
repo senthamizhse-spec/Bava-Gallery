@@ -87,6 +87,16 @@ h2 {
 }
 
 /* Responsive: stack on small screens */
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .divider {
     flex-direction: column;
@@ -96,138 +106,130 @@ h2 {
   }
 }
 
-@media (max-width: 768px) {
-  .carousel-wrapper {
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-    min-height: auto;
-  }
+.description {
+  width: 300px;
+  height: auto;
 }
 
+.description h3 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 30px;
+}
+.description p {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.carousel-container {
+  display: flex; /* flexbox for alignment */
+  align-items: center; /* vertical centering */
+  min-height: auto;
+  justify-content: center; /* horizontal centering */
+  margin-bottom: 20px;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.carousel-container img {
+  max-width: 350px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-top: 60px;
+  border-radius: 15px;
+}
+.carousel-item {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
+  min-height: 70vh; /* full viewport height */
+}
+
+.carousel-item img {
+  max-width: 700px; /* limit image size */
+  width: 600px; /* responsive scaling */
+  height: 550px; /* keep aspect ratio */
+  object-fit: contain;
+  display: block;
+  margin: 0 0; /* ensures horizontal centering */
+  border-radius: 15px;
+}
+
+/* Parent wrapper for the carousel */
+.carousel-wrapper {
+  display: flex;
+  min-height: 70vh;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#carouselImage {
+  width: 100%;
+  height: auto;
+  max-height: 70vh; /* prevent image from being too tall */
+  object-fit: cover; /* keep proportions */
+  border-radius: 8px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#contact h2 {
+  font-weight: bold;
+}
+/* Carousel itself */
+.carousel-container {
+  max-width: 100%; /* limit width */
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color:beige; */
+}
+
+.carousel-controls {
+  /* position:relative; */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 500px;
+  height: auto;
+}
+
+.carousel-controls img {
+  max-height: 100%;
+  max-width: 100%;
+}
+#prevBtn {
+  margin-top: 300px;
+  margin-right: 40px;
+  height: 100px; /* more spacing */
+}
+
+#nextBtn {
+  margin-top: 300px;
+  margin-left: 40px;
+  height: 100px;
+}
+
+/* Buttons styling */
+.carousel-controls button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive tweaks */
 @media (max-width: 300px) {
   .carousel-controls {
     flex-direction: column; /* stack buttons above/below image */
     margin-left: 20px;
     margin-right: 20px;
     min-height: auto;
-  }
-
-  .description {
-    width: 300px;
-    height: auto;
-  }
-
-  .description h3 {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 30px;
-  }
-  .description p {
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  }
-
-  .carousel-container {
-    display: flex; /* flexbox for alignment */
-    align-items: center; /* vertical centering */
-    min-height: auto;
-    justify-content: center; /* horizontal centering */
-    margin-bottom: 20px;
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  .carousel-container img {
-    max-width: 350px;
-    margin-bottom: 30px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin-top: 60px;
-    border-radius: 15px;
-  }
-  .carousel-item {
-    display: flex;
-    justify-content: center; /* centers horizontally */
-    align-items: center; /* centers vertically */
-    min-height: 70vh; /* full viewport height */
-  }
-
-  .carousel-item img {
-    max-width: 700px; /* limit image size */
-    width: 600px; /* responsive scaling */
-    height: 550px; /* keep aspect ratio */
-    object-fit: contain;
-    display: block;
-    margin: 0 0; /* ensures horizontal centering */
-    border-radius: 15px;
-  }
-
-  /* Parent wrapper for the carousel */
-  .carousel-wrapper {
-    display: flex;
-    min-height: 70vh;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
-  #carouselImage {
-    width: 100%;
-    height: auto;
-    max-height: 70vh; /* prevent image from being too tall */
-    object-fit: cover; /* keep proportions */
-    border-radius: 8px;
-    transition: opacity 0.5s ease-in-out;
-  }
-
-  #contact h2 {
-    font-weight: bold;
-  }
-  /* Carousel itself */
-  .carousel-container {
-    max-width: 100%; /* limit width */
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    /* background-color:beige; */
-  }
-
-  .carousel-controls {
-    /* position:relative; */
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    width: 500px;
-    height: auto;
-  }
-
-  .carousel-controls img {
-    max-height: 100%;
-    max-width: 100%;
-  }
-  #prevBtn {
-    margin-top: 300px;
-    margin-right: 40px;
-    height: 100px; /* more spacing */
-  }
-
-  #nextBtn {
-    margin-top: 300px;
-    margin-left: 40px;
-    height: 100px;
-  }
-
-  /* Buttons styling */
-  .carousel-controls button {
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
   }
 
   .carousel-controls button {
