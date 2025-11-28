@@ -257,7 +257,7 @@ h2 {
   margin: 10px auto;
   padding: auto;
   background-color: rgba(0, 0, 0, 0.229);
-  min-height: 70vh;
+  min-height: 50vh;
 }
 #heroCarousel img {
   display: block;
