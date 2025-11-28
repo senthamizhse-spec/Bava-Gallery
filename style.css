@@ -107,8 +107,9 @@ h2 {
 }
 
 .description {
-  width: 300px;
+  width: 400px;
   height: auto;
+  margin-right: auto;
 }
 
 .description h3 {
@@ -161,9 +162,11 @@ h2 {
 /* Parent wrapper for the carousel */
 .carousel-wrapper {
   display: flex;
-  min-height: 70vh;
-  margin-left: 100px;
-  margin-right: 100px;
+  align-items: center;
+  gap: 20px;
+  /* min-height: 70vh; */
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 #carouselImage {
