@@ -2,30 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-  </head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
+    <!-- Bootstrap JS Bundle (NOT USED FOR THIS PROJECT) - -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
   <body
     style="
-      background-image: url('images/Atmospheric_background.png');
+      background-image: url('images/Contact_Background.jpg');
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: full page;
       background-attachment: fixed;
     "
   >
     <div class="wrapper">
-       <!-- Navbar -->
+      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a href="index.html" class="navbar-brand" style="margin-right: 12rem">
@@ -70,96 +78,49 @@
         </div>
       </nav>
 
-      <!-- Carousel -->
-      <main class="carousel-container text-center my-4">
-        <div class="carousel-controls">
-          <button id="prevBtn">&#10094;&#10094; Prev</button>
-          <img
-            id="carouselImage"
-            src="images/Gallery/art1.jpg"
-            alt="Artwork 1"
-          />
-          <button id="nextBtn">&#10095;&#10095; Next</button>
-        </div>
-      </main>
-</div>
-      <!-- Footer -->
-      <footer>
-        <p>&copy; 2024 Bava Art Gallery. All rights reserved.</p>
-      </footer>
-    
+      <!-- Contact US-->
+      <section id="contact">
+        <br />
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Carousel Script -->
-    <script>
-      const totalImages = 40; // total artworks
-      let currentIndex = 1;
-      const carouselImage = document.getElementById("carouselImage");
-      let slideshowInterval;
-
-      function showImage(index) {
-        carouselImage.style.opacity = 0;
-        setTimeout(() => {
-          carouselImage.src = `images/Gallery/art${index}.jpg`;
-          carouselImage.alt = `Artwork ${index}`;
-          carouselImage.style.opacity = 1;
-        }, 300);
-      }
-
-      function nextImage() {
-        currentIndex = (currentIndex % totalImages) + 1;
-        showImage(currentIndex);
-      }
-
-      function prevImage() {
-        currentIndex = ((currentIndex - 2 + totalImages) % totalImages) + 1;
-        showImage(currentIndex);
-      }
-
-      // Buttons
-      document.getElementById("nextBtn").addEventListener("click", nextImage);
-      document.getElementById("prevBtn").addEventListener("click", prevImage);
-
-      // Auto-play
-      function startSlideshow() {
-        slideshowInterval = setInterval(nextImage, 3000); // 3s per slide
-      }
-      function stopSlideshow() {
-        clearInterval(slideshowInterval);
-      }
-      startSlideshow();
-
-      // Pause on hover (desktop)
-      carouselImage.addEventListener("mouseenter", stopSlideshow);
-      carouselImage.addEventListener("mouseleave", startSlideshow);
-
-      // Pause on touch (mobile)
-      carouselImage.addEventListener("touchstart", stopSlideshow);
-      carouselImage.addEventListener("touchend", startSlideshow);
-
-      // Swipe support
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      carouselImage.addEventListener("touchstart", (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      });
-
-      carouselImage.addEventListener("touchend", (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-      });
-
-      function handleSwipe() {
-        if (touchEndX < touchStartX - 50) {
-          nextImage(); // swipe left → next
-        }
-        if (touchEndX > touchStartX + 50) {
-          prevImage(); // swipe right → prev
-        }
-      }
-    </script>
+        <h2 class="section-title section-alignment">Contact Me</h2>
+        <br />
+        <form action="" class="inputform">
+          <label for=""><strong>Name </strong></label>
+          <input type="text" placeholder="John" required /><br /><br />
+          <label for=""><strong>Phone</strong></label>
+          <input
+            type="tel"
+            placeholder="+1234567890"
+            minlength="7"
+            maxlength="12"
+            required
+          /><br /><br />
+          <label for=""><strong>Email</strong></label>
+          <input
+            type="email"
+            placeholder="john123@gmail.com"
+            required
+          /><br /><br />
+          <label for=""><strong>Message</strong></label
+          ><br /><br />
+          <textarea
+            name=""
+            id=""
+            rows="7"
+            cols="70"
+            placeholder="Write your message"
+            maxlength="300"
+            required
+          ></textarea
+          ><br /><br />
+          <input type="submit" value="Send" class="big-button" />
+        </form>
+      </section>
+      <br />
+    </div>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Bava Art Gallery. All rights reserved.</p>
+    </footer>
   </body>
 </html>
