@@ -293,6 +293,14 @@ main {
   flex: 1; /* pushes footer down */
 }
 
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: auto;
+  }
+}
 footer {
   background: purple;
   color: #fff;
