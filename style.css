@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+   background-color: rgb(143, 86, 143);
 }
 
 .navbar .nav-link {
