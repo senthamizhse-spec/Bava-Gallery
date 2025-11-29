@@ -9,7 +9,6 @@
 
 .navbar .nav-link {
   color: black;
-  /* margin-top: 0; */
   transition: color 0.3s;
   font-size: 30px;
 }
@@ -289,10 +288,6 @@ h2 {
   flex-direction: column;
 }
 
-main {
-  flex: 1; /* pushes footer down */
-}
-
 
 @media (max-width: 768px) {
   .wrapper {
@@ -301,6 +296,11 @@ main {
     min-height: auto;
   }
 }
+
+main {
+  flex: 1; /* pushes footer down */
+}
+
 footer {
   background: purple;
   color: #fff;
