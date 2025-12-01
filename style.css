@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-   background-color: rgb(143, 86, 143);
+  background-color: rgb(143, 86, 143);
 }
 
 .navbar .nav-link {
@@ -94,7 +94,7 @@ h2 {
     margin-left: 20px;
     margin-right: 20px;
     min-height: auto;
-  }
+  } */
 }
 
 @media (max-width: 768px) {
@@ -130,6 +130,8 @@ h2 {
   margin-bottom: 20px;
   max-width: 100%;
   padding: 0 1rem;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .carousel-container img {
@@ -244,7 +246,7 @@ h2 {
     min-height: auto;
   }
   
-
+  }
   .carousel-controls button {
     width: 100%;
     font-size: 0.9rem;
